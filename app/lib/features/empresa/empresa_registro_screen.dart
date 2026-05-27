@@ -33,7 +33,6 @@ class _EmpresaRegistroScreenState
 
   // Step 1 selections
   int? _categoriaId;
-  String? _categoriaLabel;
   String? _subcategoria;
   final List<String> _servicios = [];
   String? _aniosExperiencia;
