@@ -1,16 +1,15 @@
 -- Migration 002: empresas, empresa_fotos, empresa_servicios
 
-CREATE TYPE estado_revision AS ENUM (
-    'pendiente',
-    'en_revision',
-    'en_evaluacion',
-    'aprobado',
-    'rechazado'
-);
+DO $$ BEGIN
+    CREATE TYPE estado_revision AS ENUM (
+        'pendiente', 'en_revision', 'en_evaluacion', 'aprobado', 'rechazado'
+    );
+EXCEPTION WHEN duplicate_object THEN NULL;
+END $$;
 
-CREATE TABLE empresas (
+CREATE TABLE IF NOT EXISTS empresas (
     id                  SERIAL PRIMARY KEY,
-    usuario_id          INTEGER REFERENCES usuarios(id),
+    usuario_id          INTEGER,  -- ID del usuario en SQLite local (no hay FK cross-db)
 
     -- Identidad
     nombre              VARCHAR(200) NOT NULL,
