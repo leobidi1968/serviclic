@@ -418,7 +418,7 @@ class _ItemData {
     required this.title,
     required this.subtitle,
     this.badge, // usado cuando se implementen actividades dinámicas
-    this.badgeColor,
+    this.badgeColor, // usado cuando se implementen actividades dinámicas
     this.onTap,
     this.isBlue = false,
   });
