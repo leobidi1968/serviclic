@@ -21,6 +21,8 @@ class ServiClicApp extends StatelessWidget {
         '/landing': (_) => const LandingScreen(),
         '/registro': (_) => const RegistroScreen(),
         '/home': (_) => const HomeScreen(),
+        '/perfil': (_) => const PerfilScreen(),
+        '/empresa-registro': (_) => const EmpresaRegistroScreen(),
       },
     );
   }
