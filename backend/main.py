@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import psycopg2
-from psycopg2.extras import RealDictCursor
+from database import get_conn
+from routers import empresas
 
 app = FastAPI(title="ServiClic API")
 
@@ -12,16 +12,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-DB_CONFIG = {
-    "host": "localhost",
-    "database": "db_serviclic",
-    "user": "postgres",
-    "password": "Sagan496!",
-}
-
-
-def get_conn():
-    return psycopg2.connect(**DB_CONFIG, cursor_factory=RealDictCursor)
+app.include_router(empresas.router)
 
 
 @app.get("/")
