@@ -711,10 +711,7 @@ class _EmpresaRegistroScreenState
             decoration: const InputDecoration(hintText: 'Seleccioná'),
             isExpanded: true,
             items: cats.map((c) => DropdownMenuItem(value: c.id, child: Text(c.nombre, overflow: TextOverflow.ellipsis))).toList(),
-            onChanged: (v) => setState(() {
-              _categoriaId = v;
-              _categoriaLabel = cats.firstWhere((c) => c.id == v).nombre;
-            }),
+            onChanged: (v) => setState(() => _categoriaId = v),
           ),
         ),
       ],
