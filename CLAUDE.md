@@ -6,7 +6,18 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Mobile platform connecting users with local service professionals. Folder is `ServiTec`; app brand name is **ServiClic** ("Encontrá todo lo que necesitás, en un clic.").
 
+La aplicación es una plataforma móvil diseñada para conectar de forma rápida y eficiente a usuarios con empresas y profesionales de servicios locales. 
+Su objetivo principal es centralizar la oferta de servicios en un solo lugar, permitiendo a los usuarios encontrar soluciones a sus necesidades de manera simple, confiable y en pocos pasos. 
+A través de un sistema de búsqueda por categorías o palabras clave, la app muestra resultados específicos según el servicio requerido, filtrados por ubicación, relevancia y disponibilidad.
+La plataforma incorpora geolocalización en tiempo real, lo que permite visualizar profesionales cercanos mediante un mapa interactivo o listados organizados. 
+Cada empresa cuenta con un perfil detallado que incluye información del negocio, servicios ofrecidos, calificaciones, tiempo de respuesta y evidencia visual de trabajos realizados, lo que facilita la toma de decisiones del usuario. 
+El contacto se realiza de forma directa mediante herramientas externas como WhatsApp, llamadas o correo electrónico, eliminando intermediaciones innecesarias.
+El modelo de negocio se basa en un sistema de posicionamiento competitivo, donde las empresas pueden obtener mayor visibilidad dentro de los resultados mediante un esquema de subasta o inversión, 
+destacándose en los primeros lugares de cada categoría. Asimismo, la aplicación incorpora un proceso de registro y validación de empresas que garantiza la autenticidad y calidad de los prestadores.
+En conjunto, la aplicación busca optimizar la conexión entre oferta y demanda en el sector de servicios, ofreciendo una experiencia ágil, segura y escalable.
+
 **Stage:** Design phase. All screens are JPEGs in `/`. No code yet.  
+
 **Target market:** Argentina / Rioplatense Spanish-speaking region (voseo copy throughout).  
 **Reference project:** `C:\Users\Leonardo\cortinas` — same stack, carry over all conventions from there.
 
