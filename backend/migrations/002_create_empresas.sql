@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS empresa_fotos (
 );
 
 -- Servicios ofrecidos (checkboxes del wizard: Electricidad, Plomería, etc.)
-CREATE TABLE empresa_servicios (
+CREATE TABLE IF NOT EXISTS empresa_servicios (
     empresa_id  INTEGER      NOT NULL REFERENCES empresas(id) ON DELETE CASCADE,
     servicio    VARCHAR(100) NOT NULL,
     PRIMARY KEY (empresa_id, servicio)
