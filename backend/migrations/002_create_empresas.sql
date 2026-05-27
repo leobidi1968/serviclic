@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS empresas (
 );
 
 -- Fotos de trabajos realizados (mínimo 3 requerido en el wizard)
-CREATE TABLE empresa_fotos (
+CREATE TABLE IF NOT EXISTS empresa_fotos (
     id          SERIAL  PRIMARY KEY,
     empresa_id  INTEGER NOT NULL REFERENCES empresas(id) ON DELETE CASCADE,
     url         TEXT    NOT NULL,
