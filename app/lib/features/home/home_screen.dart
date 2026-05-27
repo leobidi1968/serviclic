@@ -249,7 +249,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     if (i == 0) {
       setState(() => _tabIndex = 0);
     } else if (i == 4) {
-      Navigator.pushNamed(context, '/registro');
+      Navigator.pushNamed(context, '/perfil');
     }
   }
 
