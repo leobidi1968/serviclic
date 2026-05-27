@@ -47,9 +47,9 @@ class _PerfilScreenState extends State<PerfilScreen> {
                       Icons.access_time_outlined,
                       'Mis actividades',
                       [
-                        _ItemData(icon: Icons.send_outlined, iconColor: const Color(0xFF3B82F6), title: 'Consultas enviadas', subtitle: 'Ver estado de tus consultas', badge: '5'),
-                        _ItemData(icon: Icons.calendar_month_outlined, iconColor: AppTheme.success, title: 'Citas agendadas', subtitle: 'Gestioná tus próximas citas', badge: '3', badgeColor: AppTheme.success),
-                        _ItemData(icon: Icons.description_outlined, iconColor: const Color(0xFFA855F7), title: 'Presupuestos recibidos', subtitle: 'Revisá presupuestos y propuestas', badge: '4', badgeColor: const Color(0xFFA855F7)),
+                        _ItemData(icon: Icons.send_outlined, iconColor: const Color(0xFF3B82F6), title: 'Consultas enviadas', subtitle: 'Ver estado de tus consultas'),
+                        _ItemData(icon: Icons.calendar_month_outlined, iconColor: AppTheme.success, title: 'Citas agendadas', subtitle: 'Gestioná tus próximas citas'),
+                        _ItemData(icon: Icons.description_outlined, iconColor: const Color(0xFFA855F7), title: 'Presupuestos recibidos', subtitle: 'Revisá presupuestos y propuestas'),
                         _ItemData(icon: Icons.check_circle_outline, iconColor: AppTheme.textSecondary, title: 'Trabajos realizados', subtitle: 'Historial de trabajos completados'),
                       ],
                     ),
