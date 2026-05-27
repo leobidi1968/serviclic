@@ -706,12 +706,15 @@ class _EmpresaRegistroScreenState
         asyncCats.when(
           loading: () => const LinearProgressIndicator(),
           error: (_, __) => const Text('Error', style: TextStyle(color: Colors.red, fontSize: 12)),
-          data: (cats) => DropdownButtonFormField<int>(
-            value: _categoriaId,
-            decoration: const InputDecoration(hintText: 'Seleccioná'),
-            isExpanded: true,
-            items: cats.map((c) => DropdownMenuItem(value: c.id, child: Text(c.nombre, overflow: TextOverflow.ellipsis))).toList(),
-            onChanged: (v) => setState(() => _categoriaId = v),
+          data: (cats) => _dropdownContainer(
+            child: DropdownButton<int>(
+              value: _categoriaId,
+              isExpanded: true,
+              underline: const SizedBox(),
+              hint: const Text('Seleccioná', style: TextStyle(color: AppTheme.textSecondary, fontSize: 14)),
+              items: cats.map((c) => DropdownMenuItem(value: c.id, child: Text(c.nombre, overflow: TextOverflow.ellipsis))).toList(),
+              onChanged: (v) => setState(() => _categoriaId = v),
+            ),
           ),
         ),
       ],
