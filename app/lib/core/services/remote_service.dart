@@ -2,9 +2,6 @@ import 'dart:convert';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:http/http.dart' as http;
 import '../models/categoria.dart';
-// ignore: depend_on_referenced_packages
-import 'package:typed_data/typed_data.dart' as td;
-// dart:convert utf8 is used directly below
 
 class RemoteService {
   static const _baseUrl = 'http://66.94.106.67:8003';
