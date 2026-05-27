@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'core/services/database_service.dart';
 import 'features/auth/landing_screen.dart';
 import 'features/auth/registro_screen.dart';
+import 'features/empresa/empresa_registro_screen.dart';
 import 'features/home/home_screen.dart';
+import 'features/perfil/perfil_screen.dart';
 import 'shared/theme/app_theme.dart';
 
 class ServiClicApp extends StatelessWidget {
