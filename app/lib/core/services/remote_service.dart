@@ -16,6 +16,35 @@ class RemoteService {
     }
     throw Exception('Error ${response.statusCode} al obtener categorías');
   }
+
+  Future<Map<String, dynamic>> crearEmpresa(Map<String, dynamic> data) async {
+    final response = await http
+        .post(
+          Uri.parse('$_baseUrl/empresas/'),
+          headers: {'Content-Type': 'application/json; charset=utf-8'},
+          body: jsonEncode(data),
+        )
+        .timeout(const Duration(seconds: 15));
+    if (response.statusCode == 201) {
+      return jsonDecode(utf8.decode(response.bodyBytes));
+    }
+    throw Exception('Error ${response.statusCode} al registrar empresa');
+  }
+
+  Future<Map<String, dynamic>> actualizarDocumentacion(
+      int id, Map<String, dynamic> data) async {
+    final response = await http
+        .put(
+          Uri.parse('$_baseUrl/empresas/$id/documentacion'),
+          headers: {'Content-Type': 'application/json; charset=utf-8'},
+          body: jsonEncode(data),
+        )
+        .timeout(const Duration(seconds: 15));
+    if (response.statusCode == 200) {
+      return jsonDecode(utf8.decode(response.bodyBytes));
+    }
+    throw Exception('Error ${response.statusCode} al actualizar documentación');
+  }
 }
 
 final categoriasProvider = FutureProvider<List<Categoria>>((ref) {
