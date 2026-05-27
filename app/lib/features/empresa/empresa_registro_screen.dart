@@ -726,14 +726,29 @@ class _EmpresaRegistroScreenState
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _seccionLabel(label),
-        DropdownButtonFormField<String>(
-          value: valor,
-          decoration: const InputDecoration(hintText: 'Seleccioná'),
-          isExpanded: true,
-          items: opciones.map((o) => DropdownMenuItem(value: o, child: Text(o, overflow: TextOverflow.ellipsis))).toList(),
-          onChanged: onChanged,
+        _dropdownContainer(
+          child: DropdownButton<String>(
+            value: valor,
+            isExpanded: true,
+            underline: const SizedBox(),
+            hint: const Text('Seleccioná', style: TextStyle(color: AppTheme.textSecondary, fontSize: 14)),
+            items: opciones.map((o) => DropdownMenuItem(value: o, child: Text(o, overflow: TextOverflow.ellipsis))).toList(),
+            onChanged: onChanged,
+          ),
         ),
       ],
+    );
+  }
+
+  Widget _dropdownContainer({required Widget child}) {
+    return Container(
+      height: 50,
+      padding: const EdgeInsets.symmetric(horizontal: 12),
+      decoration: BoxDecoration(
+        color: AppTheme.surface,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: child,
     );
   }
 
